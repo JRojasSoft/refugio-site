@@ -1,236 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Residencial El Refugio | Venta de Solares</title>
-        <meta name="description" content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares listos para construir con todos los servicios básicos incluidos." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Alegreya:wght@700&display=swap" rel="stylesheet" />
-        <link href="./styles.css" rel="stylesheet" />
-        <link rel="icon" href="favicon.png" />
-    </head>
-    <body>
-        <!-- Navegación -->
-        <header class="navbar">
-            <div class="navbar-container">
-                <img src="./logotype.png" alt="Logo Residencial El Refugio" title="Residencial El Refugio" class="h-12"/>
-                <nav class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest">
-                    <a href="#inicio" class="navbar-item">Inicio</a>
-                    <a href="#servicios" class="navbar-item">Servicios</a>
-                    <a href="#solares" class="navbar-item">Solares</a>
-                    <a href="#contacto" class="navbar-item">Contacto</a>
-                </nav>
-                <a
-                    target="_blank"
-                    href="https://wa.me/18092236295"
-                    class="btn-primary h-10 hidden! md:inline-flex!"
-                    aria-label="Escribir por WhatsApp"
-                    title="Escribir por WhatsApp"
-                >
-                    WhatsApp
-                </a>
-                <button id="navMenu" class="inline-flex md:hidden cursor-pointer p-3" aria-label="Abrir menu de navegacion">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Residencial El Refugio | Venta de Solares</title>
+    <meta
+      name="description"
+      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares listos para construir con todos los servicios básicos incluidos."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Alegreya:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <!-- Navegación -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <img
+          src="./logotype.png"
+          alt="Logo Residencial El Refugio"
+          title="Residencial El Refugio"
+          class="h-12"
+        />
+        <nav
+          class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest"
+        >
+          <a href="#inicio" class="navbar-item">Inicio</a>
+          <a href="#servicios" class="navbar-item">Servicios</a>
+          <a href="#solares" class="navbar-item">Solares</a>
+          <a href="#contacto" class="navbar-item">Contacto</a>
+        </nav>
+        <a
+          target="_blank"
+          href="https://wa.me/18092236295"
+          class="btn-primary h-10 hidden! md:inline-flex!"
+          aria-label="Escribir por WhatsApp"
+          title="Escribir por WhatsApp"
+        >
+          WhatsApp
+        </a>
+        <button
+          id="navMenu"
+          class="inline-flex md:hidden cursor-pointer p-3"
+          aria-label="Abrir menu de navegacion"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
 
-        <main>
-            <!-- Hero -->
-            <section id="inicio" class="hero-bg">
-                <div class="flex items-center justify-center size-full px-4 text-center bg-white/10 backdrop-blur-md">
-                    <div class="max-w-4xl slide-in">
-                        <h1 class="text-5xl md:text-7xl mb-4 transition-all">Residencial El Refugio</h1>
-                        <p class="text-xl md:text-2xl font-light italic mb-8">"Tu santuario de paz y tranquilidad"</p>
-                        <div class="flex flex-col md:flex-row gap-4 justify-center">
-                            <a href="#solares" class="btn-secondary h-12">Ver Disponibilidad</a>
-                            <a href="https://maps.app.goo.gl/5ixrZAZbvrwuFDZ97" target="_blank" class="btn-tertiary h-12">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-5 flex-none mr-1">
-                                    <path fill-rule="evenodd" d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" clip-rule="evenodd" />
-                                </svg>
-                                Ubicación en Google Maps
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Servicios -->
-            <section id="servicios" class="py-20 bg-white">
-                <div class="container mx-auto px-6">
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-primary-dark mb-4">Comodidad y Modernidad</h2>
-                        <p class="max-w-2xl mx-auto text-stone-600">Ubicado en Hatillo al Medio, ofrecemos solares listos para construir con todos los servicios básicos incluidos.</p>
-                    </div>
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <img class="size-16 mb-4" src="./street-sign.png" alt="Calles definidas con acceso garantizado."/>
-                            <h3 class="font-semibold mb-2">Calles Afirmadas</h3>
-                            <p class="text-xs text-stone-600 uppercase">Acceso Garantizado</p>
-                        </div>
-                        <div class="info-card">
-                            <img class="size-16 mb-4" src="./street.png" alt="Contenes y urbanización definidas."/>
-                            <h3 class="font-semibold mb-2">Contenes</h3>
-                            <p class="text-xs text-stone-600 uppercase">Urbanización Definida</p>
-                        </div>
-                        <div class="info-card">
-                            <img class="size-16 mb-4" src="./water-tap.png" alt="Servicio continuo de agua potable."/>
-                            <h3 class="font-semibold mb-2">Agua Potable</h3>
-                            <p class="text-xs text-stone-600 uppercase">Servicio Continuo</p>
-                        </div>
-                        <div class="info-card">
-                            <img class="size-16 mb-4" src="./transmission-tower.png" alt="Tendido eléctrico listo para conectar."/>
-                            <h3 class="font-semibold mb-2">Tendido Eléctrico</h3>
-                            <p class="text-xs text-stone-600 uppercase">Listo para Conectar</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Mapa e Inventario --> <!-- TODO -->
-            <section id="solares" class="py-20">
-                <div class="container mx-auto px-6">
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-primary-dark mb-4">Plano del Proyecto</h2>
-                        <p class="max-w-2xl mx-auto text-stone-600">Disponemos de solares desde <strong>300 m²</strong> en adelante. Explore nuestro plano maestro para seleccionar su ubicación ideal.</p>
-                    </div>
-                    
-                    <div class="plot-grid">
-                        <div class="bg-white p-4 rounded-xl shadow-md border border-stone-100 overflow-hidden relative">
-                            <!-- Imagen del plano subida por el usuario -->
-                            <img src="./lots-blueprint.jpg" alt="Plano Residencial El Refugio" class="size-full hover:scale-200">
-                            
-                            <!-- Overlay de interacción simulado -->
-                            <!-- <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-primary/10 cursor-crosshair">
+    <main>
+      <!-- Hero -->
+      <section id="inicio" class="hero-bg">
+        <div
+          class="flex items-center justify-center size-full px-4 text-center bg-white/10 backdrop-blur-md"
+        >
+          <div class="max-w-4xl slide-in">
+            <h1 class="text-5xl md:text-7xl mb-4 transition-all">
+              Residencial El Refugio
+            </h1>
+            <p class="text-xl md:text-2xl font-light italic mb-8">
+              "Tu santuario de paz y tranquilidad"
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+              <a href="#solares" class="btn-secondary h-12"
+                >Ver Disponibilidad</a
+              >
+              <a
+                href="https://maps.app.goo.gl/5ixrZAZbvrwuFDZ97"
+                target="_blank"
+                class="btn-tertiary h-12"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="size-5 flex-none mr-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Ubicación en Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-primary-dark mb-4">
+              Comodidad y Modernidad
+            </h2>
+            <p class="max-w-2xl mx-auto text-stone-600">
+              Ubicado en Hatillo al Medio, ofrecemos solares listos para
+              construir con todos los servicios básicos incluidos.
+            </p>
+          </div>
+          <div class="info-grid">
+            <div class="info-card">
+              <img
+                class="size-16 mb-4"
+                src="./street-sign.png"
+                alt="Calles definidas con acceso garantizado."
+              />
+              <h3 class="font-semibold mb-2">Calles Afirmadas</h3>
+              <p class="text-xs text-stone-600 uppercase">Acceso Garantizado</p>
+            </div>
+            <div class="info-card">
+              <img
+                class="size-16 mb-4"
+                src="./street.png"
+                alt="Contenes y urbanización definidas."
+              />
+              <h3 class="font-semibold mb-2">Contenes</h3>
+              <p class="text-xs text-stone-600 uppercase">
+                Urbanización Definida
+              </p>
+            </div>
+            <div class="info-card">
+              <img
+                class="size-16 mb-4"
+                src="./water-tap.png"
+                alt="Servicio continuo de agua potable."
+              />
+              <h3 class="font-semibold mb-2">Agua Potable</h3>
+              <p class="text-xs text-stone-600 uppercase">Servicio Continuo</p>
+            </div>
+            <div class="info-card">
+              <img
+                class="size-16 mb-4"
+                src="./transmission-tower.png"
+                alt="Tendido eléctrico listo para conectar."
+              />
+              <h3 class="font-semibold mb-2">Tendido Eléctrico</h3>
+              <p class="text-xs text-stone-600 uppercase">
+                Listo para Conectar
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mapa e Inventario -->
+      <!-- TODO -->
+      <section id="solares" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-primary-dark mb-4">
+              Plano del Proyecto
+            </h2>
+            <p class="max-w-2xl mx-auto text-stone-600">
+              Disponemos de solares desde <strong>300 m²</strong> en adelante.
+              Explore nuestro plano maestro para seleccionar su ubicación ideal.
+            </p>
+          </div>
+
+          <div class="plot-grid">
+            <div
+              class="bg-white p-4 rounded-xl shadow-md border border-stone-100 overflow-hidden relative"
+            >
+              <!-- Imagen del plano subida por el usuario -->
+              <img
+                src="./lots-blueprint.jpg"
+                alt="Plano Residencial El Refugio"
+                class="size-full hover:scale-200"
+              />
+
+              <!-- Overlay de interacción simulado -->
+              <!-- <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-primary/10 cursor-crosshair">
                                 <span class="bg-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl">Haga clic para ampliar detalles</span>
                             </div> -->
-                        </div>
-                    
-                        <div class="bg-white p-8 rounded-xl shadow-md border border-stone-100">
-                            <h3 class="flex items-center gap-2 mb-6 text-2xl font-semibold text-primary-dark">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-8 flex-none">
-                                    <path d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1ZM9.5 6A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1ZM3.5 10A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1Z" />
-                                </svg>
-                                Calculadora de Inversión
-                            </h3>
-                            
-                            <div class="space-y-6">
-                                <div>
-                                    <label for="meterInput" class="block text-sm font-semibold text-stone-600 mb-2">Tamaño del Solar (m²)</label>
-                                    <input type="number" id="meterInput" value="300" min="300" step="10" class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none transition">
-                                </div>
-                                
-                                <div class="grid grid-cols-2 gap-4 items-end">
-                                    <div>
-                                        <label for="priceInput" class="block text-sm font-semibold text-stone-600 mb-2">Precio por m² (DOP)</label>
-                                        <input type="number" id="priceInput" value="100" class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none">
-                                    </div>
-                                    <div>
-                                        <label for="initialPercent" class="block text-sm font-semibold text-stone-600 mb-2">% de Inicial</label>
-                                        <select id="initialPercent" class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none">
-                                            <option value="0.20">20% (Mínimo)</option>
-                                            <option value="0.30">30%</option>
-                                            <option value="0.40">40%</option>
-                                            <option value="0.50">50%</option>
-                                        </select>
-                                    </div>
-                                </div>
-    
-                                <div class="p-6 rounded-lg bg-primary-darker text-white">
-                                    <div class="flex justify-between items-center gap-2 mb-2">
-                                        <span class="text-sm">Precio Total</span>
-                                        <span id="totalPrice" class="text-xl font-bold">RD$30,000</span>
-                                    </div>
-                                    <div class="flex justify-between items-center gap-2">
-                                        <span class="text-sm">Pago de Inicial</span>
-                                        <span id="initialAmount" class="text-2xl font-bold">RD$6,000</span>
-                                    </div>
-                                </div>
-    
-                                <div class="chart-container h-48">
-                                    <canvas id="paymentChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Galería y Vistas -->
-            <section id="galeria" class="py-20 bg-white">
-                <div class="container mx-auto px-6">
-                    <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">Vistas del Proyecto</h2>
-                    <div class="gallery-grid">
-                        <div class="group relative overflow-hidden rounded-xl shadow-xl">
-                            <img src="./render-project-entrance.png" alt="Entrada al residencial El Refugio" class="w-full h-100 object-cover group-hover:scale-120 transition duration-700">
-                            <div class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent">
-                                <h3 class="font-semibold">Entrada Principal</h3>
-                                <p class="text-sm text-stone-300 italic">Diseño robusto y natural</p>
-                            </div>
-                        </div>
-                        <div class="group relative overflow-hidden rounded-xl shadow-xl">
-                            <img src="./render-home.jpg" alt="Vista de viviendas" class="w-full h-100 object-cover group-hover:scale-120 transition duration-700">
-                            <div class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent">
-                                <h3 class="font-semibold">Viviendas</h3>
-                                <p class="text-sm text-stone-300 italic">Diseño y construcción personalizada</p>
-                            </div>
-                        </div>
-                        <div class="group relative overflow-hidden rounded-xl shadow-xl">
-                            <img src="./green-areas.png" alt="Áreas verdes en el residencial" class="w-full h-100 object-cover group-hover:scale-120 transition duration-700">
-                            <div class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent">
-                                <h3 class="font-semibold">Áreas Verdes</h3>
-                                <p class="text-sm text-stone-300 italic">Un entorno rodeado de naturaleza</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Contacto -->
-        <footer id="contacto" class="py-20 bg-primary-darker splash-darker">
-            <div class="container mx-auto px-6 text-center">
-                <div class="mb-6">
-                    <img src="./logo.png" alt="Logo Residencial El Refugio" class="flex mb-6 mx-auto h-40">
-                    <p class="text-lg uppercase tracking-widest">Información y Venta</p>
-                </div>
-
-                
-                <div class="max-w-2xl rounded-xl mx-auto border border-white/20 bg-white/10 backdrop-blur-md">
-                    <iframe
-                        title="Ubicación del proyecto en Google Maps"
-                        class="size-full h-86 border-0 outline-none rounded-t-xl"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d10963.179334744658!2d-70.28449046320746!3d19.294324695048708!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE3JzMxLjIiTiA3MMKwMTcnMjMuNCJX!5e0!3m2!1sen!2sca!4v1770953550535!5m2!1sen!2sca"
-                    ></iframe>
-                    <p class="text-sm px-10 pt-2">Hatillo al Medio, República Dominicana</p>
-                    <address class="p-10 pt-4">
-                        <p class="text-white text-2xl font-bold mb-4">Ing. Federico Rojas</p>
-                        
-                        <a href="https://wa.me/18092236295" target="_blank" class="btn-primary h-10 w-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 flex-none mr-1">
-                                <path fill-rule="evenodd" d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 0 1-.522 1.756.75.75 0 0 0 .584 1.143 5.976 5.976 0 0 0 3.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-2-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
-                            </svg>
-                            Escribir por WhatsApp
-                        </a>
-                    </address>
-                </div>
             </div>
-            <div class="text-center mt-4 px-4 text-[10px] text-stone-500">
-                <p>Website made by Jeimy Rojas.</p>
-                <p>
-                    Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> | 
-                    Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> | 
-                    Icons made by <a href="https://www.flaticon.com/authors/design-circle" title="Design Circle">Design Circle</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md border border-stone-100"
+            >
+              <h3
+                class="flex items-center gap-2 mb-6 text-2xl font-semibold text-primary-dark"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="size-8 flex-none"
+                >
+                  <path
+                    d="M15.5 2A1.5 1.5 0 0 0 14 3.5v13a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 16.5 2h-1ZM9.5 6A1.5 1.5 0 0 0 8 7.5v9A1.5 1.5 0 0 0 9.5 18h1a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 10.5 6h-1ZM3.5 10A1.5 1.5 0 0 0 2 11.5v5A1.5 1.5 0 0 0 3.5 18h1A1.5 1.5 0 0 0 6 16.5v-5A1.5 1.5 0 0 0 4.5 10h-1Z"
+                  />
+                </svg>
+                Calculadora de Inversión
+              </h3>
+
+              <div class="flex flex-col gap-6">
+                <div>
+                  <label
+                    for="meterInput"
+                    class="block text-sm font-semibold text-stone-600 mb-2"
+                    >Tamaño del Solar (m²)</label
+                  >
+                  <input
+                    type="number"
+                    id="meterInput"
+                    value="300"
+                    min="300"
+                    step="10"
+                    class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none transition"
+                  />
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 items-end">
+                  <div>
+                    <label
+                      for="priceInput"
+                      class="block text-sm font-semibold text-stone-600 mb-2"
+                      >Precio por m² (DOP)</label
+                    >
+                    <input
+                      type="number"
+                      id="priceInput"
+                      value="100"
+                      class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="initialPercent"
+                      class="block text-sm font-semibold text-stone-600 mb-2"
+                      >% de Inicial</label
+                    >
+                    <select
+                      id="initialPercent"
+                      class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
+                    >
+                      <option value="0.20">20% (Mínimo)</option>
+                      <option value="0.30">30%</option>
+                      <option value="0.40">40%</option>
+                      <option value="0.50">50%</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="p-6 rounded-lg bg-primary-darker text-white">
+                  <div class="flex justify-between items-center gap-2 mb-2">
+                    <span class="text-sm">Precio Total</span>
+                    <span id="totalPrice" class="text-xl font-bold"
+                      >RD$30,000</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center gap-2">
+                    <span class="text-sm">Pago de Inicial</span>
+                    <span id="initialAmount" class="text-2xl font-bold"
+                      >RD$6,000</span
+                    >
+                  </div>
+                </div>
+
+                <div class="chart-container">
+                  <canvas
+                    id="paymentChart"
+                    aria-label="Costo de inversión"
+                    class=""
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería y Vistas -->
+      <section id="galeria" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">
+            Vistas del Proyecto
+          </h2>
+          <div class="gallery-grid">
+            <div class="group relative overflow-hidden rounded-xl shadow-xl">
+              <img
+                src="./render-project-entrance.png"
+                alt="Entrada al residencial El Refugio"
+                class="w-full h-100 object-cover group-hover:scale-120 transition duration-700"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+              >
+                <h3 class="font-semibold">Entrada Principal</h3>
+                <p class="text-sm text-stone-300 italic">
+                  Diseño robusto y natural
                 </p>
+              </div>
             </div>
-        </footer>
+            <div class="group relative overflow-hidden rounded-xl shadow-xl">
+              <img
+                src="./render-home.jpg"
+                alt="Vista de viviendas"
+                class="w-full h-100 object-cover group-hover:scale-120 transition duration-700"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+              >
+                <h3 class="font-semibold">Viviendas</h3>
+                <p class="text-sm text-stone-300 italic">
+                  Diseño y construcción personalizada
+                </p>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-xl">
+              <img
+                src="./green-areas.png"
+                alt="Áreas verdes en el residencial"
+                class="w-full h-100 object-cover group-hover:scale-120 transition duration-700"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+              >
+                <h3 class="font-semibold">Áreas Verdes</h3>
+                <p class="text-sm text-stone-300 italic">
+                  Un entorno rodeado de naturaleza
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <script src="./main.js"></script>
-    </body>
+    <!-- Contacto -->
+    <footer id="contacto" class="py-20 bg-primary-darker splash-darker">
+      <div class="container mx-auto px-6 text-center">
+        <div class="mb-6">
+          <img
+            src="./logo.png"
+            alt="Logo Residencial El Refugio"
+            class="flex mb-6 mx-auto h-40"
+          />
+          <p class="text-lg uppercase tracking-widest">Información y Venta</p>
+        </div>
+
+        <div
+          class="max-w-2xl rounded-xl mx-auto border border-white/20 bg-white/10 backdrop-blur-md"
+        >
+          <iframe
+            title="Ubicación del proyecto en Google Maps"
+            class="size-full h-86 border-0 outline-none rounded-t-xl"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d10963.179334744658!2d-70.28449046320746!3d19.294324695048708!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE3JzMxLjIiTiA3MMKwMTcnMjMuNCJX!5e0!3m2!1sen!2sca!4v1770953550535!5m2!1sen!2sca"
+          ></iframe>
+          <p class="text-sm px-10 pt-2">
+            Hatillo al Medio, República Dominicana
+          </p>
+          <address class="p-10 pt-4">
+            <p class="text-white text-2xl font-bold mb-4">
+              Ing. Federico Rojas
+            </p>
+
+            <a
+              href="https://wa.me/18092236295"
+              target="_blank"
+              class="btn-primary h-10 w-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="size-5 flex-none mr-1"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 0 1-.522 1.756.75.75 0 0 0 .584 1.143 5.976 5.976 0 0 0 3.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-2-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </address>
+        </div>
+      </div>
+      <div class="text-center mt-4 px-4 text-[10px] text-stone-500">
+        <p>Website made by JRojas.</p>
+        <p>
+          Icons made by
+          <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+          | Icons made by
+          <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp"
+            >Eucalyp</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+          | Icons made by
+          <a
+            href="https://www.flaticon.com/authors/design-circle"
+            title="Design Circle"
+            >Design Circle</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>
