@@ -4,7 +4,7 @@
   "description": "Simple single page static site for el refugio project information.",
   "main": " ",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./dist/styles.css && node build.js",
+    "build": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./docs/styles.css && node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
