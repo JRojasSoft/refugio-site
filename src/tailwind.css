@@ -19,6 +19,9 @@
     h1, h2 {
         font-family: var(--font-serif);
     }
+    address {
+        font-style: normal;
+    }
 }
 @utility flip-h {
     transform: scaleX(-1);
@@ -93,12 +96,11 @@
     @apply bg-stone-50 border border-stone-100;
 }
 
-.plot-grid {
+.plot-grid, .gallery-grid {
     @apply grid gap-8;
     grid-template-columns: repeat( auto-fit, minmax(305px, 1fr) );
 }
 
 .gallery-grid {
-    @apply grid gap-8 text-white;
-    grid-template-columns: repeat( auto-fit, minmax(305px, 1fr) );
+    @apply text-white;
 }
