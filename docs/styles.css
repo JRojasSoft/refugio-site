@@ -3,8 +3,9 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
-    --font-serif: 'Alegreya', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    --font-serif: "Alegreya", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-stone-50: oklch(98.5% 0.001 106.423);
@@ -312,9 +313,6 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
-  .h-48 {
-    height: calc(var(--spacing) * 48);
-  }
   .h-86 {
     height: calc(var(--spacing) * 86);
   }
@@ -366,12 +364,8 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
-  .space-y-6 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
-    }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -744,13 +738,13 @@
 .hero-bg {
   height: 100vh;
   color: var(--color-stone-50);
-  background: url('./placeholder-garden.jpg'), linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background: url("./placeholder-garden.jpg"), linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
 }
 .splash-darker {
   color: var(--color-stone-300);
-  background: url('./splash-dark.jpg'), linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background: url("./splash-dark.jpg"), linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
 }
@@ -865,7 +859,7 @@
 .info-grid {
   display: grid;
   gap: calc(var(--spacing) * 8);
-  grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .info-card {
   display: inline-flex;
@@ -883,15 +877,10 @@
 .plot-grid, .gallery-grid {
   display: grid;
   gap: calc(var(--spacing) * 8);
-  grid-template-columns: repeat( auto-fit, minmax(305px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
 }
 .gallery-grid {
   color: var(--color-white);
-}
-@property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -1071,7 +1060,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
