@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "./index.html";
+@source "./main.js";
 
 @theme {
   --font-sans:
@@ -57,7 +59,7 @@
 }
 
 .hero-bg {
-  @apply h-screen text-stone-50;
+  @apply h-dvh w-dvw text-stone-50;
   background:
     url("./placeholder-garden.jpg"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
@@ -72,6 +74,10 @@
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
+}
+
+.glass-bg {
+  @apply flex items-center justify-center px-4 text-center bg-white/10 backdrop-blur-md;
 }
 
 .btn-primary {
