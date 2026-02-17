@@ -53,6 +53,7 @@
   @apply flex items-center h-full px-4 transition border-y-4 border-transparent outline-none;
   @apply hover:text-primary-light hover:border-b-primary-light;
   @apply focus:text-primary-light focus:border-b-primary-light;
+  @apply active:text-primary-light active:border-b-primary-light;
 }
 
 .hero-bg {
@@ -78,6 +79,7 @@
   @apply bg-primary text-white;
   @apply hover:bg-primary-dark;
   @apply focus:bg-primary-dark;
+  @apply active:bg-primary-dark;
 }
 
 .btn-secondary {
@@ -85,6 +87,7 @@
   @apply bg-white text-primary;
   @apply hover:bg-white/65;
   @apply focus:bg-white/65;
+  @apply active:bg-white/65;
 }
 
 .btn-tertiary {
@@ -92,6 +95,7 @@
   @apply bg-transparent text-white border-white;
   @apply hover:bg-primary-dark/60;
   @apply focus:bg-primary-dark/60;
+  @apply active:bg-primary-dark/60;
 }
 
 .info-grid {
