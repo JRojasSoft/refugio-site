@@ -39,8 +39,8 @@
   backdrop-filter: blur(10px);
 }
 .navbar-container {
-  @apply flex justify-between items-center;
-  @apply h-18 w-full mx-auto px-6;
+  @apply flex justify-between items-center gap-2;
+  @apply h-18 w-full mx-auto px-4;
   @media (width >= 64rem /* 1024px */) {
     @apply px-8;
   }
