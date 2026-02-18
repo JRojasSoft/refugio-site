@@ -52,7 +52,7 @@
 }
 
 .text-404 {
-  @apply absolute top-1/5 sm:top-1/4 text-white/5 transition-all duration-300;
+  @apply absolute top-1/5 sm:top-1/4 text-white/5 transition-all duration-300 pointer-events-none;
   left: calc(50% - 2ch);
   line-height: 1;
   font-size: 20vh;
