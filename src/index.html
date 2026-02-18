@@ -299,9 +299,11 @@
                 <div class="p-6 rounded-lg bg-primary-darker text-white">
                   <div class="flex justify-between items-center gap-2 mb-2">
                     <span class="text-sm">Precio Total</span>
-                    <span id="totalPrice" class="text-xl font-bold"
-                      >RD$30,000</span
-                    >
+                    <span id="totalPrice" class="text-lg">RD$30,000</span>
+                  </div>
+                  <div class="flex justify-between items-center gap-2 mb-2">
+                    <span class="text-sm">Total Financiado</span>
+                    <span id="financingAmount" class="text-lg">RD$24,000</span>
                   </div>
                   <div class="flex justify-between items-center gap-2">
                     <span class="text-sm">Pago de Inicial</span>
@@ -315,7 +317,7 @@
                   <canvas
                     id="paymentChart"
                     role="img"
-                    aria-label="Costo de compra de lote. Precio inicial = Tamaño del solar x precio por metro. Financiamiento = Precio total - Precio inicial."
+                    aria-label="Costo de compra de lote. Precio inicial = (Tamaño del solar x Precio por metro) x Porcentaje de inicial. Financiamiento = (Tamaño del solar x Precio por metro) - Precio inicial."
                   ></canvas>
                 </div>
               </div>

@@ -3,6 +3,7 @@ const meterInput = document.getElementById('meterInput');
 const priceInput = document.getElementById('priceInput');
 const initialPercent = document.getElementById('initialPercent');
 const totalPriceEl = document.getElementById('totalPrice');
+const financingAmountEl = document.getElementById('financingAmount');
 const initialAmountEl = document.getElementById('initialAmount');
 
 let paymentChart;
@@ -24,16 +25,24 @@ function updateCalculations() {
   });
 
   totalPriceEl.textContent = formatter.format(total);
+  financingAmountEl.textContent = formatter.format(remaining);
   initialAmountEl.textContent = formatter.format(initial);
 
   updateChart(initial, remaining);
 }
 
 function updateChart(initial, remaining) {
-  const ctx = document.getElementById('paymentChart').getContext('2d');
+  const chartEl = document.getElementById('paymentChart');
+  const ctx = chartEl.getContext('2d');
   
   if (paymentChart) {
     paymentChart.destroy();
+  }
+
+  if (initial || remaining) {
+    chartEl.classList.remove('sr-only');
+  } else {
+    chartEl.classList.add('sr-only');
   }
 
   paymentChart = new Chart(ctx, {
@@ -58,7 +67,8 @@ function updateChart(initial, remaining) {
               family: '"Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
               size: 12
             },
-            usePointStyle: true
+            usePointStyle: true,
+            color: '#57534d'
           }
         }
       },

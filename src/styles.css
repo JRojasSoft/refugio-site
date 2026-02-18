@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
 @source "./index.html";
-@source "./main.js";
+@source "./*.js";
 
 @theme {
   --font-sans:
