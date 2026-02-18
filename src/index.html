@@ -96,24 +96,6 @@
         >
           WhatsApp
         </a>
-        <button
-          id="navMenu"
-          class="inline-flex md:hidden cursor-pointer p-3"
-          aria-label="Abrir menu de navegacion"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
       </div>
     </header>
 
@@ -160,7 +142,7 @@
 
       <!-- Servicios -->
       <section id="servicios" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
+        <div class="container">
           <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-primary-dark mb-4">
               Comodidad y Modernidad
@@ -218,7 +200,7 @@
       <!-- Mapa e Inventario -->
       <!-- TODO -->
       <section id="solares" class="py-20">
-        <div class="container mx-auto px-6">
+        <div class="container">
           <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-primary-dark mb-4">
               Plano del Proyecto
@@ -237,7 +219,7 @@
               <img
                 src="./lots-blueprint.jpg"
                 alt="Plano Residencial El Refugio"
-                class="size-full hover:scale-200 active:scale-200 touch-manipulation"
+                class="hover:scale-200 active:scale-200 touch-manipulation"
               />
 
               <!-- Overlay de interacción simulado -->
@@ -292,7 +274,7 @@
                     <input
                       type="number"
                       id="priceInput"
-                      value="100"
+                      value=""
                       class="w-full p-4 bg-stone-50 border border-stone-200 rounded-lg focus:ring-2 focus:ring-primary outline-none"
                     />
                   </div>
@@ -344,7 +326,7 @@
 
       <!-- Galería y Vistas -->
       <section id="galeria" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
+        <div class="container">
           <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">
             Vistas del Proyecto
           </h2>
@@ -356,7 +338,7 @@
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
               <div
-                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
                 <h3 class="font-semibold">Entrada Principal</h3>
                 <p class="text-sm text-stone-300 italic">
@@ -371,7 +353,7 @@
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
               <div
-                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
                 <h3 class="font-semibold">Viviendas</h3>
                 <p class="text-sm text-stone-300 italic">
@@ -386,7 +368,7 @@
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
               <div
-                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black to-transparent"
+                class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
                 <h3 class="font-semibold">Áreas Verdes</h3>
                 <p class="text-sm text-stone-300 italic">
@@ -400,13 +382,13 @@
     </main>
 
     <!-- Contacto -->
-    <footer id="contacto" class="py-20 bg-primary-darker splash-darker">
-      <div class="container mx-auto px-6 text-center">
+    <footer id="contacto" class="pt-10 pb-6 bg-primary-darker splash-darker">
+      <div class="container text-center">
         <div class="mb-6">
           <img
             src="./logo.png"
             alt="Logo Residencial El Refugio"
-            class="flex mb-6 mx-auto h-40"
+            class="flex mb-6 mx-auto h-24"
           />
           <p class="text-lg uppercase tracking-widest">Información y Venta</p>
         </div>
