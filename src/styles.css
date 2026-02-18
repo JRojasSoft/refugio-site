@@ -18,7 +18,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color: var(--color-stone-950);
+    color: var(--color-stone-600);
     background-color: var(--color-stone-50);
   }
   h1,
@@ -45,7 +45,7 @@
 
 .navbar {
   @apply fixed z-50 w-full h-18 border-b;
-  @apply bg-white/95 border-stone-200 text-stone-600;
+  @apply bg-white/95 border-stone-200;
   backdrop-filter: blur(10px);
 }
 .navbar-container {
@@ -123,9 +123,12 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.plot-grid,
 .gallery-grid {
   grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+}
+
+.plot-grid {
+  @apply grid-cols-1 lg:grid-cols-2;
 }
 
 .gallery-grid {
