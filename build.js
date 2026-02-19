@@ -21,3 +21,8 @@ fs.cp('./src/index.html', './docs/index.html', (err) => {
     console.error(err);
   }
 });
+fs.cp('./src/404.html', './docs/404.html', (err) => {
+  if (err) {
+    console.error(err);
+  }
+});

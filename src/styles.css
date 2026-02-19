@@ -1,0 +1,141 @@
+@import "tailwindcss" source(none);
+@source "./index.html";
+@source "./*.js";
+
+@theme {
+  --font-sans:
+    "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  --font-serif:
+    "Alegreya", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-primary-darker: #122913;
+  --color-primary-dark: #30562c;
+  --color-primary: #4e762e;
+  --color-primary-light: #8fa856;
+  --color-primary-lighter: #ebf29f;
+  --spacing-18: 4.5rem;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-stone-600);
+    background-color: var(--color-stone-50);
+  }
+  h1,
+  h2 {
+    font-family: var(--font-serif);
+  }
+  address {
+    font-style: normal;
+  }
+}
+
+@utility container {
+  @apply w-full max-w-full mx-auto px-4;
+  @media (width >= 64rem /* 1024px */) {
+    @apply max-w-full px-8;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 96rem;
+  }
+}
+
+.navbar {
+  @apply fixed z-50 w-full h-18 border-b;
+  @apply bg-white/95 border-stone-200;
+  backdrop-filter: blur(10px);
+}
+.navbar-container {
+  @apply flex justify-between items-center;
+  @apply h-18 w-full mx-auto px-4;
+  @media (width >= 64rem /* 1024px */) {
+    @apply px-8;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem /* 1536px */) {
+    max-width: 96rem;
+  }
+}
+.navbar-item {
+  @apply flex items-center h-full px-4 transition border-y-4 border-transparent outline-none;
+  @apply hover:text-primary-light hover:border-b-primary-light;
+  @apply focus:text-primary-light focus:border-b-primary-light;
+}
+
+.hero-bg {
+  @apply h-dvh w-dvw text-stone-50;
+  background:
+    url("./placeholder-garden.jpg"),
+    linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background-size: cover;
+  background-position: center;
+}
+
+.splash-darker {
+  @apply text-stone-300;
+  background:
+    url("./splash-dark.jpg"),
+    linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background-size: cover;
+  background-position: center;
+}
+
+.glass-bg {
+  @apply flex items-center justify-center px-4 text-center bg-white/10 backdrop-blur-md;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-2 transition shadow-lg rounded-lg text-sm font-semibold border border-transparent outline-none;
+  @apply bg-primary text-white;
+  @apply hover:bg-primary-dark;
+  @apply focus:bg-primary-dark;
+  @apply active:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-2 transition shadow-lg rounded-lg text-sm font-semibold border border-transparent outline-none;
+  @apply bg-white text-primary;
+  @apply hover:bg-white/65;
+  @apply focus:bg-white/65;
+  @apply active:bg-white/65;
+}
+
+.btn-tertiary {
+  @apply inline-flex items-center justify-center px-6 py-2 transition shadow-lg rounded-lg text-sm font-semibold border-2 outline-none;
+  @apply bg-transparent text-white border-white;
+  @apply hover:bg-primary-dark/60;
+  @apply focus:bg-primary-dark/60;
+  @apply active:bg-primary-dark/60;
+}
+
+.info-grid,
+.plot-grid,
+.gallery-grid {
+  @apply grid gap-4;
+}
+
+.info-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+}
+
+.plot-grid {
+  @apply grid-cols-1 lg:grid-cols-2;
+}
+
+.gallery-grid {
+  @apply text-white;
+}
+
+.info-card {
+  @apply inline-flex flex-col items-center p-8 rounded-xl shadow-md;
+  @apply bg-stone-50 border border-stone-100;
+}
