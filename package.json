@@ -4,10 +4,10 @@
   "description": "Simple single page brochure like static site for el refugio residential project information.",
   "main": "",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/styles.css -o ./docs/styles.css --w",
-    "styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./docs/styles.css --m && npx @tailwindcss/cli -i ./src/404.css -o ./docs/404.css --m",
-    "build": "npm run styles && node build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./docs/css/styles.css --w",
+    "styles": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./docs/css/styles.css --m && npx @tailwindcss/cli -i ./src/css/404.css -o ./docs/css/404.css --m",
+    "build": "node build.js && npm run styles",
+    "test": "cd docs && npx http-server -a localhost"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/JRojasSoft/refugio-site#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18"
   }
 }
