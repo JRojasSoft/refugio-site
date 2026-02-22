@@ -1,4 +1,4 @@
-// --- Lógica de la Calculadora ---
+// Calculator & chart logic
 const meterInput = document.getElementById('meterInput');
 const priceInput = document.getElementById('priceInput');
 const initialPercent = document.getElementById('initialPercent');
@@ -17,7 +17,7 @@ function updateCalculations() {
   const initial = total * percent;
   const remaining = total - initial;
 
-  // Formateo de moneda
+  // Currency formatting
   const formatter = new Intl.NumberFormat('es-DO', {
     style: 'currency',
     currency: 'DOP',

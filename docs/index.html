@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Residencial El Refugio | Venta de Solares</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="brand/favicon.png" />
     <meta
       name="description"
       content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
@@ -24,7 +24,7 @@
     />
     <meta
       property="og:description"
-      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
+      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante, listos para construir con todos los servicios básicos incluidos."
     />
     <meta
       property="og:url"
@@ -32,7 +32,7 @@
     />
     <meta
       property="og:image"
-      content="https://jrojassoft.github.io/refugio-site/render-project-entrance.png"
+      content="https://jrojassoft.github.io/refugio-site/img/render-project-entrance.avif"
     />
     <meta
       property="og:image:alt"
@@ -46,7 +46,7 @@
     />
     <meta
       name="twitter:description"
-      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
+      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante, listos para construir con todos los servicios básicos incluidos."
     />
     <meta
       property="twitter:url"
@@ -54,7 +54,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://jrojassoft.github.io/refugio-site/render-project-entrance.png"
+      content="https://jrojassoft.github.io/refugio-site/img/render-project-entrance.avif"
     />
     <meta
       property="twitter:image:alt"
@@ -64,17 +64,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Alegreya:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Alegreya:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preload" as="image" href="/img/placeholder-garden.avif" />
+    <link href="/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navegación -->
+    <!-- Navbar -->
     <header class="navbar">
       <div class="navbar-container">
         <img
-          src="./logotype.png"
+          src="/img/logotype.webp"
           alt="Residencial El Refugio"
           title="Residencial El Refugio"
           class="h-12"
@@ -105,7 +106,7 @@
         <div class="glass-bg size-full">
           <div class="max-w-4xl slide-in">
             <h1
-              class="text-5xl md:text-7xl mb-4 transition-[font-size] duration-500 ease-linear"
+              class="text-5xl md:text-7xl mb-4 md:transition-[font-size] duration-500 ease-linear"
             >
               Residencial El Refugio
             </h1>
@@ -156,7 +157,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./street-sign.png"
+                src="/img/street-sign.webp"
                 alt="Calles definidas con acceso garantizado."
               />
               <h3 class="text-stone-950 font-semibold mb-2">
@@ -167,7 +168,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./street.png"
+                src="/img/street.webp"
                 alt="Contenes y urbanización definidas."
               />
               <h3 class="text-stone-950 font-semibold mb-2">Contenes</h3>
@@ -176,7 +177,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./water-tap.png"
+                src="/img/water-tap.webp"
                 alt="Servicio continuo de agua potable."
               />
               <h3 class="text-stone-950 font-semibold mb-2">Agua Potable</h3>
@@ -185,7 +186,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./transmission-tower.png"
+                src="/img/transmission-tower.webp"
                 alt="Tendido eléctrico listo para conectar."
               />
               <h3 class="text-stone-950 font-semibold mb-2">
@@ -197,7 +198,7 @@
         </div>
       </section>
 
-      <!-- Mapa e Inventario -->
+      <!-- Solares -->
       <!-- TODO -->
       <section id="solares" class="py-20">
         <div class="container">
@@ -215,22 +216,22 @@
             <div
               class="bg-white p-4 rounded-xl shadow-md border border-stone-100 overflow-hidden relative"
             >
-              <!-- Imagen del plano subida por el usuario -->
+              <!-- Imagen del plano del proyecto -->
               <img
-                src="./lots-blueprint-color.jpg"
+                src="/img/lots-blueprint-color.avif"
                 alt="Plano Residencial El Refugio"
-                class="hover:scale-200 active:scale-200 touch-manipulation"
+                class="hover:scale-400 active:scale-400 sm:hover:scale-300 sm:active:scale-300 touch-manipulation"
               />
 
-              <!-- Overlay de interacción simulado -->
-              <div
+              <!-- Zoom-in plant overlay -->
+              <!-- <div
                 class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-primary/10 cursor-crosshair"
               >
                 <span
                   class="bg-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl"
                   >Haga clic para ampliar detalles</span
                 >
-              </div>
+              </div> -->
               <div id="lotPreview" class="absolute bottom-0 right-0"></div>
             </div>
 
@@ -339,7 +340,7 @@
         </div>
       </section>
 
-      <!-- Galería y Vistas -->
+      <!-- Gallery and views -->
       <section id="galeria" class="py-20 bg-white">
         <div class="container">
           <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">
@@ -348,7 +349,7 @@
           <div class="gallery-grid">
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./render-project-entrance.png"
+                src="/img/render-project-entrance.avif"
                 alt="Entrada al residencial El Refugio"
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
@@ -363,7 +364,7 @@
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./render-home.jpg"
+                src="/img/render-home.avif"
                 alt="Vista de viviendas"
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
@@ -378,7 +379,7 @@
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./green-areas.png"
+                src="/img/green-areas.avif"
                 alt="Áreas verdes en el residencial"
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
@@ -401,7 +402,7 @@
       <div class="container text-center">
         <div class="mb-6">
           <img
-            src="./logo.png"
+            src="/img/logo.webp"
             alt="Residencial El Refugio"
             class="flex mb-6 mx-auto h-24"
           />
@@ -418,6 +419,7 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d10963.179334744658!2d-70.28449046320746!3d19.294324695048708!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDE3JzMxLjIiTiA3MMKwMTcnMjMuNCJX!5e0!3m2!1sen!2sca!4v1770953550535!5m2!1sen!2sca"
+            crossorigin="anonymous"
           ></iframe>
           <p class="text-sm px-10 pt-2">
             Hatillo al Medio, República Dominicana
@@ -479,7 +481,11 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"
+      integrity="sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
