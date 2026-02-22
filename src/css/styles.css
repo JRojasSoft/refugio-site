@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
-@source "./index.html";
-@source "./*.js";
+@source "../index.html";
+@source "../**/*.js";
 
 @theme {
   --font-sans:
@@ -16,10 +16,12 @@
   --spacing-18: 4.5rem;
 }
 @layer base {
-  html {
+  html,
+  :host {
     scroll-behavior: smooth;
     color: var(--color-stone-600);
     background-color: var(--color-stone-50);
+    font-weight: 400;
   }
   h1,
   h2 {
@@ -70,7 +72,7 @@
 .hero-bg {
   @apply h-dvh w-dvw text-stone-50;
   background:
-    url("./placeholder-garden.jpg"),
+    url("/img/placeholder-garden.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
@@ -79,7 +81,7 @@
 .splash-darker {
   @apply text-stone-300;
   background:
-    url("./splash-dark.jpg"),
+    url("/img/splash-dark.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;

@@ -1,5 +1,5 @@
 @import "tailwindcss" source(none);
-@source "./404.html";
+@source "../404.html";
 
 @theme {
   --font-sans:
@@ -14,10 +14,12 @@
   --color-primary-lighter: #ebf29f;
 }
 @layer base {
-  html {
+  html,
+  :host {
     scroll-behavior: smooth;
     color: var(--color-stone-300);
     background-color: var(--color-stone-50);
+    font-weight: 400;
   }
   h1,
   h2 {
@@ -33,7 +35,7 @@
 
 .splash-darker {
   background:
-    url("./splash-dark.jpg"),
+    url("/img/splash-dark.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
