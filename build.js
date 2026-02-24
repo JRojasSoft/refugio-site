@@ -19,6 +19,13 @@ fs.cp(`${src}/js`, `${dest}/js`, {recursive: true}, onError);
 console.log('\nCreating images dest folder...\n');
 fs.mkdirSync(`${dest}/img/brand`, { recursive: true });
 
+function generateFavicon(inFile, outFile, outFormat, resizeOpts = {}) {
+  const sharpStream = sharp(`${imgSrc}/${inFile}`)
+    .resize(resizeOpts)
+    .toFormat(outFormat, { quality: 80 });
+  return sharpStream.toFile(`${imgDest}/${outFile}.${outFormat}`, onError);
+}
+
 function processImg(fileName, format, outFormat, formatOpts = {quality: 50}, resizeOpts = {}, blur = null) {
   const sharpStream = sharp(`${imgSrc}/${fileName}.${format}`)
     .resize(resizeOpts)
@@ -31,8 +38,12 @@ function processImg(fileName, format, outFormat, formatOpts = {quality: 50}, res
 
 console.log('Processing and optimizing images...\n');
 
-processImg('brand/favicon', 'png', 'png', { quality: 80 }, 
-  { width: 48, height: 48, fit: 'contain', background: {r:0, g:0, b:0, alpha:0} });
+generateFavicon('brand/logomark.svg', 'brand/favicon-16', 'png', { width: 16, height: 16 });
+generateFavicon('brand/logomark.svg', 'brand/favicon-32', 'png', { width: 32, height: 32 });
+generateFavicon('brand/logomark.svg', 'brand/favicon-48', 'png', { width: 48, height: 48 });
+generateFavicon('brand/logomark.svg', 'brand/favicon-167', 'png', { width: 167, height: 167 });
+generateFavicon('brand/logomark.svg', 'brand/favicon-180', 'png', { width: 180, height: 180 });
+generateFavicon('brand/logomark.svg', 'brand/favicon-192', 'png', { width: 192, height: 192 });
 
 processImg('brand/logo', 'png', 'webp', { quality: 50, lossless: true }, { width: 271 });
 processImg('brand/logotype', 'png', 'webp', { quality: 50, lossless: true }, { width: 340 });
