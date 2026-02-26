@@ -111,7 +111,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="navbar">
+    <header class="navbar" role="banner">
       <div class="navbar-container">
         <img
           src="/img/brand/logotype.webp"
@@ -121,6 +121,7 @@
         />
         <nav
           class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest"
+          role="navigation"
         >
           <a href="#inicio" class="navbar-item">Inicio</a>
           <a href="#servicios" class="navbar-item">Servicios</a>
@@ -139,7 +140,7 @@
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <!-- Hero -->
       <section id="inicio" class="hero-bg">
         <div class="glass-bg size-full">
@@ -390,7 +391,7 @@
               <img
                 src="/img/render-project-entrance.avif"
                 alt="Entrada al residencial El Refugio"
-                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                class="w-full h-100 object-top-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
               />
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
@@ -437,7 +438,11 @@
     </main>
 
     <!-- Contacto -->
-    <footer id="contacto" class="pt-10 pb-6 bg-primary-darker splash-darker">
+    <footer
+      id="contacto"
+      class="pt-10 pb-6 bg-primary-darker splash-darker"
+      role="contentinfo"
+    >
       <div class="container text-center">
         <div class="mb-6">
           <img
