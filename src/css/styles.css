@@ -72,7 +72,7 @@
 .hero-bg {
   @apply h-dvh w-dvw text-stone-50;
   background:
-    url("/img/placeholder-garden.avif"),
+    url("img/placeholder-garden.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
@@ -81,7 +81,7 @@
 .splash-darker {
   @apply text-stone-300;
   background:
-    url("/img/splash-dark.avif"),
+    url("img/splash-dark.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;
