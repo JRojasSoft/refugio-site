@@ -7,31 +7,73 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- For all browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/brand/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/brand/favicon-16.png"
+    />
+    <!-- For Google and Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="img/brand/favicon-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/brand/favicon-192.png"
+    />
+    <!-- For iPad -->
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="167x167"
+      href="img/brand/favicon-167.png"
+    />
+    <!-- For iPhone -->
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="img/brand/favicon-180.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Alegreya:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link href="./404.css" rel="stylesheet" />
+    <link rel="preload" as="image" href="/img/splash-dark.avif" />
+    <link href="/css/404.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Nav -->
-    <header class="navbar">
+    <header class="navbar" role="banner">
       <div class="flex justify-center items-center h-18 w-full mx-auto">
         <h1>
           <img
-            src="./logotype.png"
+            src="/img/brand/logotype.webp"
             alt="Residencial El Refugio"
             title="Residencial El Refugio"
             class="h-12"
+            height="48"
+            width="195"
           />
         </h1>
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <!-- Hero -->
       <section class="relative splash-darker">
         <div class="glass-bg flex-col h-dvh w-dvw overflow-hidden">
@@ -40,7 +82,7 @@
           <p class="text-xl font-light mb-8">
             Para ver más información del proyecto vuelva al inicio.
           </p>
-          <a href="/" class="btn-tertiary h-12">
+          <a href="/refugio-site" class="btn-tertiary h-12">
             Ir al inicio
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +101,10 @@
       </section>
     </main>
 
-    <footer class="absolute bottom-0 px-4 py-2 w-full text-xs text-stone-500">
+    <footer
+      class="absolute bottom-0 px-4 py-2 w-full text-xs text-stone-500"
+      role="contentinfo"
+    >
       <p class="text-center">Website made by JRojas.</p>
     </footer>
   </body>

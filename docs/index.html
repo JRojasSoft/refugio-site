@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>Residencial El Refugio | Venta de Solares</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- For all browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/brand/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/brand/favicon-16.png"
+    />
+    <!-- For Google and Android -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="img/brand/favicon-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/brand/favicon-192.png"
+    />
+    <!-- For iPad -->
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="167x167"
+      href="img/brand/favicon-167.png"
+    />
+    <!-- For iPhone -->
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="img/brand/favicon-180.png"
+    />
     <meta
       name="description"
       content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
@@ -24,7 +63,7 @@
     />
     <meta
       property="og:description"
-      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
+      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante, listos para construir con todos los servicios básicos incluidos."
     />
     <meta
       property="og:url"
@@ -32,7 +71,7 @@
     />
     <meta
       property="og:image"
-      content="https://jrojassoft.github.io/refugio-site/render-project-entrance.png"
+      content="https://jrojassoft.github.io/refugio-site/img/render-project-entrance.avif"
     />
     <meta
       property="og:image:alt"
@@ -46,7 +85,7 @@
     />
     <meta
       name="twitter:description"
-      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante listos para construir con todos los servicios básicos incluidos."
+      content="Residencial El Refugio ubicado en Hatillo al Medio, ofrecemos solares desde 300 m² en adelante, listos para construir con todos los servicios básicos incluidos."
     />
     <meta
       property="twitter:url"
@@ -54,7 +93,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://jrojassoft.github.io/refugio-site/render-project-entrance.png"
+      content="https://jrojassoft.github.io/refugio-site/img/render-project-entrance.avif"
     />
     <meta
       property="twitter:image:alt"
@@ -64,23 +103,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Alegreya:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Alegreya:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preload" as="image" href="/img/placeholder-garden.avif" />
+    <link href="/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navegación -->
-    <header class="navbar">
+    <!-- Navbar -->
+    <header class="navbar" role="banner">
       <div class="navbar-container">
         <img
-          src="./logotype.png"
+          src="/img/brand/logotype.webp"
           alt="Residencial El Refugio"
           title="Residencial El Refugio"
           class="h-12"
         />
         <nav
           class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest"
+          role="navigation"
         >
           <a href="#inicio" class="navbar-item">Inicio</a>
           <a href="#servicios" class="navbar-item">Servicios</a>
@@ -89,7 +130,7 @@
         </nav>
         <a
           target="_blank"
-          href="https://wa.me/18092236295?text=Buenas%2C+me+interesa+solicitar+informaci%C3%B3n+o+adquirir+un+solar+del+Refugio."
+          href="https://wa.me/18097640462?text=Buenas%2C+me+interesa+solicitar+informaci%C3%B3n+o+adquirir+un+solar+del+Refugio."
           class="btn-primary h-10"
           aria-label="Escribir por WhatsApp"
           title="Escribir por WhatsApp"
@@ -99,13 +140,13 @@
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <!-- Hero -->
       <section id="inicio" class="hero-bg">
         <div class="glass-bg size-full">
           <div class="max-w-4xl slide-in">
             <h1
-              class="text-5xl md:text-7xl mb-4 transition-[font-size] duration-500 ease-linear"
+              class="text-5xl md:text-7xl mb-4 md:transition-[font-size] duration-500 ease-linear"
             >
               Residencial El Refugio
             </h1>
@@ -156,7 +197,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./street-sign.png"
+                src="/img/street-sign.webp"
                 alt="Calles definidas con acceso garantizado."
               />
               <h3 class="text-stone-950 font-semibold mb-2">
@@ -167,7 +208,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./street.png"
+                src="/img/street.webp"
                 alt="Contenes y urbanización definidas."
               />
               <h3 class="text-stone-950 font-semibold mb-2">Contenes</h3>
@@ -176,7 +217,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./water-tap.png"
+                src="/img/water-tap.webp"
                 alt="Servicio continuo de agua potable."
               />
               <h3 class="text-stone-950 font-semibold mb-2">Agua Potable</h3>
@@ -185,7 +226,7 @@
             <div class="info-card">
               <img
                 class="size-16 mb-4"
-                src="./transmission-tower.png"
+                src="/img/transmission-tower.webp"
                 alt="Tendido eléctrico listo para conectar."
               />
               <h3 class="text-stone-950 font-semibold mb-2">
@@ -197,7 +238,7 @@
         </div>
       </section>
 
-      <!-- Mapa e Inventario -->
+      <!-- Solares -->
       <!-- TODO -->
       <section id="solares" class="py-20">
         <div class="container">
@@ -213,29 +254,29 @@
 
           <div class="plot-grid">
             <div
-              class="bg-white p-4 rounded-xl shadow-md border border-stone-100 overflow-hidden relative"
+              class="content-center p-4 rounded-xl shadow-md bg-white border border-stone-100 overflow-hidden relative"
             >
-              <!-- Imagen del plano subida por el usuario -->
+              <!-- Imagen del plano del proyecto -->
               <img
-                src="./lots-blueprint-color.jpg"
+                src="/img/lots-blueprint-color.avif"
                 alt="Plano Residencial El Refugio"
-                class="hover:scale-200 active:scale-200 touch-manipulation"
+                class="hover:scale-400 active:scale-400 sm:hover:scale-300 sm:active:scale-300 touch-manipulation"
               />
 
-              <!-- Overlay de interacción simulado -->
-              <div
+              <!-- Zoom-in plant overlay -->
+              <!-- <div
                 class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-primary/10 cursor-crosshair"
               >
                 <span
                   class="bg-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl"
                   >Haga clic para ampliar detalles</span
                 >
-              </div>
+              </div> -->
               <div id="lotPreview" class="absolute bottom-0 right-0"></div>
             </div>
 
             <div
-              class="bg-white p-8 rounded-xl shadow-md border border-stone-100"
+              class="p-8 rounded-xl shadow-md bg-white border border-stone-100"
             >
               <h3
                 class="flex items-center gap-2 mb-6 text-2xl font-semibold text-primary-dark"
@@ -339,7 +380,7 @@
         </div>
       </section>
 
-      <!-- Galería y Vistas -->
+      <!-- Gallery and views -->
       <section id="galeria" class="py-20 bg-white">
         <div class="container">
           <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">
@@ -348,9 +389,10 @@
           <div class="gallery-grid">
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./render-project-entrance.png"
+                src="/img/render-project-entrance.avif"
                 alt="Entrada al residencial El Refugio"
-                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                class="w-full h-100 object-top-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                loading="lazy"
               />
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
@@ -363,9 +405,10 @@
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./render-home.jpg"
+                src="/img/render-home.avif"
                 alt="Vista de viviendas"
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                loading="lazy"
               />
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
@@ -378,9 +421,10 @@
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
               <img
-                src="./green-areas.png"
+                src="/img/green-areas.avif"
                 alt="Áreas verdes en el residencial"
                 class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                loading="lazy"
               />
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
@@ -397,11 +441,15 @@
     </main>
 
     <!-- Contacto -->
-    <footer id="contacto" class="pt-10 pb-6 bg-primary-darker splash-darker">
+    <footer
+      id="contacto"
+      class="pt-10 pb-6 bg-primary-darker splash-darker"
+      role="contentinfo"
+    >
       <div class="container text-center">
         <div class="mb-6">
           <img
-            src="./logo.png"
+            src="/img/brand/logo.webp"
             alt="Residencial El Refugio"
             class="flex mb-6 mx-auto h-24"
           />
@@ -428,7 +476,7 @@
             </p>
 
             <a
-              href="https://wa.me/18092236295?text=Buenas%2C+me+interesa+solicitar+informaci%C3%B3n+o+adquirir+un+solar+del+Refugio."
+              href="https://wa.me/18097640462?text=Buenas%2C+me+interesa+solicitar+informaci%C3%B3n+o+adquirir+un+solar+del+Refugio."
               target="_blank"
               class="btn-primary h-10 w-full"
             >
@@ -479,7 +527,11 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"
+      integrity="sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,64 @@
+@import "tailwindcss" source(none);
+@source "../404.html";
+
+@theme {
+  --font-sans:
+    "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  --font-serif:
+    "Alegreya", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-primary-darker: #122913;
+  --color-primary-dark: #30562c;
+  --color-primary: #4e762e;
+  --color-primary-light: #8fa856;
+  --color-primary-lighter: #ebf29f;
+}
+@layer base {
+  html,
+  :host {
+    scroll-behavior: smooth;
+    color: var(--color-stone-300);
+    background-color: var(--color-stone-50);
+    font-weight: 400;
+  }
+  h1,
+  h2 {
+    font-family: var(--font-serif);
+  }
+}
+
+.navbar {
+  @apply fixed z-50 w-full h-18 border-b;
+  @apply bg-white/95 border-stone-200 text-stone-600;
+  backdrop-filter: blur(10px);
+}
+
+.splash-darker {
+  background:
+    url("/img/splash-dark.avif"),
+    linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background-size: cover;
+  background-position: center;
+}
+
+.glass-bg {
+  @apply flex items-center justify-center px-4 text-center bg-white/10 backdrop-blur-md;
+}
+
+.btn-tertiary {
+  @apply inline-flex items-center justify-center px-6 py-2 transition shadow-lg rounded-lg text-sm font-semibold border-2 outline-none;
+  @apply bg-transparent text-white border-white;
+  @apply hover:bg-primary-dark/60;
+  @apply focus:bg-primary-dark/60;
+  @apply active:bg-primary-dark/60;
+}
+
+.text-404 {
+  @apply absolute top-1/5 sm:top-1/4 text-white/5 transition-all duration-300 pointer-events-none select-none not-sr-only;
+  left: calc(50% - 2ch);
+  line-height: 1;
+  font-size: 20vh;
+  @media (width >= 48rem /* 768px */) {
+    font-size: 25vh;
+  }
+}
