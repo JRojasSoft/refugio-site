@@ -126,11 +126,12 @@
 }
 
 .gallery-grid {
-  grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 .plot-grid {
-  grid-template-columns: repeat(auto-fit, minmax(344px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 .gallery-grid {
@@ -140,4 +141,35 @@
 .info-card {
   @apply inline-flex flex-col items-center p-8 rounded-xl shadow-md;
   @apply bg-stone-50 border border-stone-100;
+}
+
+@keyframes appearUp {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-title {
+  animation:
+    slideUp 2s ease-in-out 0s 1,
+    appearUp 2s ease-in-out 0s 1;
+}
+
+.animate-subtitle {
+  animation:
+    slideUp 2s ease-in-out 1s 1,
+    appearUp 2s ease-in-out 0s 1;
 }

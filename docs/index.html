@@ -118,6 +118,8 @@
           alt="Residencial El Refugio"
           title="Residencial El Refugio"
           class="h-12"
+          height="48"
+          width="195"
         />
         <nav
           class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest"
@@ -146,14 +148,18 @@
         <div class="glass-bg size-full">
           <div class="max-w-4xl slide-in">
             <h1
-              class="text-5xl md:text-7xl mb-4 md:transition-[font-size] duration-500 ease-linear"
+              class="text-5xl md:text-7xl mb-4 md:transition-[font-size] duration-500 ease-linear animate-title"
             >
               Residencial El Refugio
             </h1>
-            <p class="text-xl md:text-2xl font-light italic mb-8">
+            <p
+              class="text-xl md:text-2xl font-light italic mb-8 animate-subtitle"
+            >
               "Tu santuario de paz y tranquilidad"
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <div
+              class="flex flex-col md:flex-row gap-4 justify-center animate-subtitle"
+            >
               <a href="#solares" class="btn-secondary h-12"
                 >Ver Disponibilidad</a
               >
@@ -182,9 +188,9 @@
       </section>
 
       <!-- Servicios -->
-      <section id="servicios" class="py-20 bg-white">
+      <section id="servicios" class="py-6 sm:py-20 bg-white">
         <div class="container">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-4xl font-bold text-primary-dark mb-4">
               Comodidad y Modernidad
             </h2>
@@ -239,10 +245,9 @@
       </section>
 
       <!-- Solares -->
-      <!-- TODO -->
-      <section id="solares" class="py-20">
+      <section id="solares" class="py-6 sm:py-20">
         <div class="container">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-4xl font-bold text-primary-dark mb-4">
               Plano del Proyecto
             </h2>
@@ -254,25 +259,30 @@
 
           <div class="plot-grid">
             <div
-              class="content-center p-4 rounded-xl shadow-md bg-white border border-stone-100 overflow-hidden relative"
+              id="imageContainer"
+              class="content-center p-4 rounded-xl shadow-md bg-white border border-stone-100 relative overflow-auto"
             >
-              <!-- Imagen del plano del proyecto -->
+              <!-- Project lots image -->
               <img
+                id="lotsImage"
                 src="img/lots-blueprint-color.avif"
                 alt="Plano Residencial El Refugio"
-                class="hover:scale-400 active:scale-400 sm:hover:scale-300 sm:active:scale-300 touch-manipulation"
+                class="touch-auto cursor-grab"
+                width="1300"
+                height="1000"
+                draggable="false"
               />
 
-              <!-- Zoom-in plant overlay -->
-              <!-- <div
-                class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-primary/10 cursor-crosshair"
+              <!-- Zoom-in lot overlay -->
+              <div
+                id="lotsInfoOverlay"
+                class="absolute inset-0 flex items-center justify-center bg-primary/20 cursor-zoom-in"
               >
                 <span
                   class="bg-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl"
                   >Haga clic para ampliar detalles</span
                 >
-              </div> -->
-              <div id="lotPreview" class="absolute bottom-0 right-0"></div>
+              </div>
             </div>
 
             <div
@@ -353,15 +363,21 @@
                 <div class="p-6 rounded-lg bg-primary-darker text-white">
                   <div class="flex justify-between items-center gap-2 mb-2">
                     <span class="text-sm">Precio Total</span>
-                    <span id="totalPrice" class="text-lg">RD$30,000</span>
+                    <span id="totalPrice" class="text-base sm:text-lg"
+                      >RD$30,000</span
+                    >
                   </div>
                   <div class="flex justify-between items-center gap-2 mb-2">
                     <span class="text-sm">Total Financiado</span>
-                    <span id="financingAmount" class="text-lg">RD$24,000</span>
+                    <span id="financingAmount" class="text-base sm:text-lg"
+                      >RD$24,000</span
+                    >
                   </div>
                   <div class="flex justify-between items-center gap-2">
                     <span class="text-sm">Pago de Inicial</span>
-                    <span id="initialAmount" class="text-2xl font-bold"
+                    <span
+                      id="initialAmount"
+                      class="text-lg sm:text-2xl font-bold"
                       >RD$6,000</span
                     >
                   </div>
@@ -381,9 +397,11 @@
       </section>
 
       <!-- Gallery and views -->
-      <section id="galeria" class="py-20 bg-white">
+      <section id="galeria" class="py-6 sm:py-20 bg-white">
         <div class="container">
-          <h2 class="text-4xl font-bold text-center mb-12 text-primary-dark">
+          <h2
+            class="text-4xl font-bold text-center mb-8 sm:mb-12 text-primary-dark"
+          >
             Vistas del Proyecto
           </h2>
           <div class="gallery-grid">
@@ -452,6 +470,8 @@
             src="img/brand/logo.webp"
             alt="Residencial El Refugio"
             class="flex mb-6 mx-auto h-24"
+            height="96"
+            width="155"
           />
           <p class="text-lg uppercase tracking-widest">Información y Venta</p>
         </div>
