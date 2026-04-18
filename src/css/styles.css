@@ -70,7 +70,7 @@
 }
 
 .hero-bg {
-  @apply h-dvh w-dvw text-stone-50;
+  @apply h-dvh w-full text-stone-50;
   background:
     url("../img/placeholder-garden.avif"),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
