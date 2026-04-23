@@ -7,7 +7,7 @@
     "tailwind": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./docs/css/styles.css --w",
     "styles": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./docs/css/styles.css --m && npx @tailwindcss/cli -i ./src/css/404.css -o ./docs/css/404.css --m",
     "build": "node build.js && npm run styles",
-    "serve": "cd docs && npx http-server -a localhost",
+    "serve": "cd docs && npx http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
