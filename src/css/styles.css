@@ -102,9 +102,10 @@
 .btn-secondary {
   @apply inline-flex items-center justify-center px-6 py-2 transition shadow-lg rounded-lg text-sm font-semibold border border-transparent outline-none;
   @apply bg-white text-primary;
-  @apply hover:bg-white/65;
-  @apply focus:bg-white/65;
-  @apply active:bg-white/65;
+  @apply hover:bg-gray-200;
+  @apply focus:bg-gray-200;
+  @apply active:bg-gray-200;
+  @apply disabled:bg-gray-300 disabled:text-primary/25 disabled:cursor-not-allowed;
 }
 
 .btn-tertiary {

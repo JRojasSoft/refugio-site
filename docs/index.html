@@ -259,24 +259,74 @@
 
           <div class="plot-grid">
             <div
-              id="imageContainer"
-              class="content-center p-4 rounded-xl shadow-md bg-white border border-stone-100 relative overflow-auto"
+              class="relative rounded-xl shadow-md bg-white border border-stone-100"
             >
               <!-- Project lots image -->
-              <img
-                id="lotsImage"
-                src="img/lots-blueprint-color.avif"
-                alt="Plano Residencial El Refugio"
-                class="touch-auto cursor-grab"
-                width="1300"
-                height="1000"
-                draggable="false"
-              />
-
+              <div
+                class="relative size-full flex items-center justify-center rounded-xl overflow-hidden"
+              >
+                <img
+                  id="lotsImage"
+                  src="img/lots-blueprint-color.avif"
+                  alt="Plano Residencial El Refugio"
+                  class="cursor-grab"
+                  width="1300"
+                  height="1000"
+                  draggable="false"
+                />
+              </div>
+              <!-- Zoom buttons -->
+              <div
+                id="lotsZoomControls"
+                class="absolute right-4 bottom-4 p-2 hidden"
+              >
+                <button
+                  id="lotsZoomMinus"
+                  class="btn-secondary p-2! cursor-pointer mr-2"
+                  aria-label="Alejar imagen"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="size-5 flex-none"
+                  >
+                    <path
+                      d="M6.75 8.25a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5Z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M9 2a7 7 0 1 0 4.391 12.452l3.329 3.328a.75.75 0 1 0 1.06-1.06l-3.328-3.329A7 7 0 0 0 9 2ZM3.5 9a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <button
+                  id="lotsZoomPlus"
+                  class="btn-secondary p-2! cursor-pointer"
+                  aria-label="Acercar imagen"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="size-5 flex-none"
+                  >
+                    <path
+                      d="M9 6a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 9 6Z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Zm7-5.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
               <!-- Zoom-in lot overlay -->
               <div
                 id="lotsInfoOverlay"
-                class="absolute inset-0 flex items-center justify-center bg-primary/20 cursor-zoom-in"
+                class="absolute inset-0 flex items-center justify-center rounded-xl bg-primary/20 cursor-zoom-in"
               >
                 <span
                   class="bg-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl"
@@ -387,6 +437,7 @@
                   <canvas
                     id="paymentChart"
                     role="img"
+                    class="sr-only"
                     aria-label="Costo de compra de lote. Precio inicial = (Tamaño del solar x Precio por metro) x Porcentaje de inicial. Financiamiento = (Tamaño del solar x Precio por metro) - Precio inicial."
                   ></canvas>
                 </div>
@@ -409,7 +460,7 @@
               <img
                 src="img/project-air-view.avif"
                 alt="Vista aérea del residencial El Refugio"
-                class="w-full h-100 object-top-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
                 loading="lazy"
               />
               <div
@@ -425,7 +476,7 @@
               <img
                 src="img/render-project-entrance.avif"
                 alt="Entrada al residencial El Refugio"
-                class="w-full h-100 object-top-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                class="w-full h-100 object-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
                 loading="lazy"
               />
               <div
