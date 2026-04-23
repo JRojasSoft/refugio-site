@@ -48,10 +48,13 @@ generateFavicon('brand/logomark.svg', 'brand/favicon-180', 'png', 180);
 generateFavicon('brand/logomark.svg', 'brand/favicon-192', 'png', 192);
 
 processImg('brand/logo', 'png', 'webp', { quality: 50, lossless: true }, { width: 271 });
+processImg('brand/logo', 'png', 'png', { quality: 50, lossless: true }, { width: 271 });
 processImg('brand/logotype', 'png', 'webp', { quality: 50, lossless: true }, { width: 340 });
+processImg('brand/logotype', 'png', 'png', { quality: 50, lossless: true }, { width: 340 });
 
 ['street', 'street-sign', 'transmission-tower', 'water-tap'].forEach((file) => {
   processImg(file, 'png', 'webp', { quality: 50, lossless: true });
+  processImg(file, 'png', 'png', { quality: 50, lossless: true });
 });
 
 processImg('splash-dark', 'jpg', 'avif', { quality: 80 }, {width: 1920});
