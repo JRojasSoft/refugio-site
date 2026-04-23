@@ -113,14 +113,17 @@
     <!-- Navbar -->
     <header class="navbar" role="banner">
       <div class="navbar-container">
-        <img
-          src="img/brand/logotype.webp"
-          alt="Residencial El Refugio"
-          title="Residencial El Refugio"
-          class="h-12"
-          height="48"
-          width="195"
-        />
+        <picture>
+          <source srcset="img/brand/logotype.webp" type="image/webp" />
+          <img
+            src="img/brand/logotype.png"
+            alt="Residencial El Refugio"
+            title="Residencial El Refugio"
+            class="h-12"
+            height="48"
+            width="195"
+          />
+        </picture>
         <nav
           class="hidden md:flex h-full font-semibold text-sm uppercase tracking-widest"
           role="navigation"
@@ -201,40 +204,55 @@
           </div>
           <div class="info-grid">
             <div class="info-card">
-              <img
-                class="size-16 mb-4"
-                src="img/street-sign.webp"
-                alt="Calles definidas con acceso garantizado."
-              />
+              <picture>
+                <source srcset="img/street-sign.webp" type="image/webp" />
+                <img
+                  class="size-16 mb-4"
+                  src="img/street-sign.png"
+                  alt="Calles definidas con acceso garantizado."
+                />
+              </picture>
               <h3 class="text-stone-950 font-semibold mb-2">
                 Calles Afirmadas
               </h3>
               <p class="text-xs uppercase">Acceso Garantizado</p>
             </div>
             <div class="info-card">
-              <img
-                class="size-16 mb-4"
-                src="img/street.webp"
-                alt="Contenes y urbanización definidas."
-              />
+              <picture>
+                <source srcset="img/street.webp" type="image/webp" />
+                <img
+                  class="size-16 mb-4"
+                  src="img/street.png"
+                  alt="Contenes y urbanización definidas."
+                />
+              </picture>
               <h3 class="text-stone-950 font-semibold mb-2">Contenes</h3>
               <p class="text-xs uppercase">Urbanización Definida</p>
             </div>
             <div class="info-card">
-              <img
-                class="size-16 mb-4"
-                src="img/water-tap.webp"
-                alt="Servicio continuo de agua potable."
-              />
+              <picture>
+                <source srcset="img/water-tap.webp" type="image/webp" />
+                <img
+                  class="size-16 mb-4"
+                  src="img/water-tap.png"
+                  alt="Servicio continuo de agua potable."
+                />
+              </picture>
               <h3 class="text-stone-950 font-semibold mb-2">Agua Potable</h3>
               <p class="text-xs uppercase">Servicio Continuo</p>
             </div>
             <div class="info-card">
-              <img
-                class="size-16 mb-4"
-                src="img/transmission-tower.webp"
-                alt="Tendido eléctrico listo para conectar."
-              />
+              <picture>
+                <source
+                  srcset="img/transmission-tower.webp"
+                  type="image/webp"
+                />
+                <img
+                  class="size-16 mb-4"
+                  src="img/transmission-tower.png"
+                  alt="Tendido eléctrico listo para conectar."
+                />
+              </picture>
               <h3 class="text-stone-950 font-semibold mb-2">
                 Tendido Eléctrico
               </h3>
@@ -265,15 +283,25 @@
               <div
                 class="relative size-full flex items-center justify-center rounded-xl overflow-hidden"
               >
-                <img
-                  id="lotsImage"
-                  src="img/lots-blueprint-color.avif"
-                  alt="Plano Residencial El Refugio"
-                  class="cursor-grab"
-                  width="1300"
-                  height="1000"
-                  draggable="false"
-                />
+                <picture>
+                  <source
+                    srcset="img/lots-blueprint-color.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="img/lots-blueprint-color.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    id="lotsImage"
+                    src="img/lots-blueprint-color.jpg"
+                    alt="Plano Residencial El Refugio"
+                    class="cursor-grab"
+                    width="1300"
+                    height="1000"
+                    draggable="false"
+                  />
+                </picture>
               </div>
               <!-- Zoom buttons -->
               <div
@@ -457,12 +485,16 @@
           </h2>
           <div class="gallery-grid">
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
-              <img
-                src="img/project-air-view.avif"
-                alt="Vista aérea del residencial El Refugio"
-                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="img/project-air-view.avif" type="image/avif" />
+                <source srcset="img/project-air-view.webp" type="image/webp" />
+                <img
+                  src="img/project-air-view.jpg"
+                  alt="Vista aérea del residencial El Refugio"
+                  class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
@@ -473,12 +505,22 @@
               </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
-              <img
-                src="img/render-project-entrance.avif"
-                alt="Entrada al residencial El Refugio"
-                class="w-full h-100 object-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="img/render-project-entrance.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="img/render-project-entrance.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="img/render-project-entrance.jpg"
+                  alt="Entrada al residencial El Refugio"
+                  class="w-full h-100 object-right object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
@@ -489,12 +531,16 @@
               </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
-              <img
-                src="img/render-home.avif"
-                alt="Vista de viviendas"
-                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="img/render-home.avif" type="image/avif" />
+                <source srcset="img/render-home.webp" type="image/webp" />
+                <img
+                  src="img/render-home.jpg"
+                  alt="Vista de viviendas"
+                  class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
@@ -505,12 +551,16 @@
               </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-xl">
-              <img
-                src="img/green-areas.avif"
-                alt="Áreas verdes en el residencial"
-                class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="img/green-areas.avif" type="image/avif" />
+                <source srcset="img/green-areas.webp" type="image/webp" />
+                <img
+                  src="img/green-areas.jpg"
+                  alt="Áreas verdes en el residencial"
+                  class="w-full h-100 object-cover group-hover:scale-120 group-active:scale-120 transition duration-700"
+                  loading="lazy"
+                />
+              </picture>
               <div
                 class="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary-darker to-transparent"
               >
@@ -533,13 +583,16 @@
     >
       <div class="container text-center">
         <div class="mb-6">
-          <img
-            src="img/brand/logo.webp"
-            alt="Residencial El Refugio"
-            class="flex mb-6 mx-auto h-24"
-            height="96"
-            width="155"
-          />
+          <picture>
+            <source srcset="img/brand/logo.webp" type="image/webp" />
+            <img
+              src="img/brand/logo.png"
+              alt="Residencial El Refugio"
+              class="flex mb-6 mx-auto h-24"
+              height="96"
+              width="155"
+            />
+          </picture>
           <p class="text-lg uppercase tracking-widest">Información y Venta</p>
         </div>
 

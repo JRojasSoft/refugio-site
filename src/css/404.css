@@ -35,7 +35,22 @@
 
 .splash-darker {
   background:
-    url("../img/splash-dark.avif"),
+    url("../img/splash-dark.jpg"),
+    linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  /* Chrome/Edge/Opera/Samsung, Safari will fallback to this */
+  background:
+    -webkit-image-set(
+      url("../img/splash-dark.avif") type("image/avif"),
+      url("../img/splash-dark.webp") type("image/webp"),
+      url("../img/splash-dark.jpg") type("image/jpeg")
+    ),
+    linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
+  background:
+    image-set(
+      url("../img/splash-dark.avif") type("image/avif"),
+      url("../img/splash-dark.webp") type("image/webp"),
+      url("../img/splash-dark.jpg") type("image/jpeg")
+    ),
     linear-gradient(rgba(18, 41, 19, 1), rgba(18, 41, 19, 1));
   background-size: cover;
   background-position: center;

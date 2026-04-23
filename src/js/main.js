@@ -266,6 +266,7 @@ function closeDragElement() {
   document.removeEventListener('touchmove', elementDrag, {passive: false});
 }
 lotsImage.addEventListener('mousedown', (e) => {
+  e.preventDefault();
   lotsImage.classList.add('cursor-grabbing');
   dragMouseDown(e);
 });
