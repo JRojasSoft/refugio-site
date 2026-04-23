@@ -18,6 +18,7 @@ fs.cp(`${src}/js`, `${dest}/js`, {recursive: true}, onError);
 
 console.log('\nCreating images dest folder...\n');
 fs.mkdirSync(`${dest}/img/brand`, { recursive: true });
+fs.writeFile(`${dest}/CNAME`, 'residencialelrefugio.do', onError);
 
 function generateImg(inFile, outFile, outFormat, formatOpts = {quality: 50}, resizeOpts = {}, blur = null) {
   const sharpStream = sharp(`${imgSrc}/${inFile}`)
@@ -72,6 +73,9 @@ processImg('green-areas', 'png', 'jpg', { quality: 50 }, {height: 700});
 processImg('render-project-entrance', 'png', 'avif', { quality: 50 }, {height: 700});
 processImg('render-project-entrance', 'png', 'webp', { quality: 50 }, {height: 700});
 processImg('render-project-entrance', 'png', 'jpg', { quality: 50 }, {height: 700});
+processImg('project-air-view', 'png', 'avif', { quality: 50 }, {height: 700});
+processImg('project-air-view', 'png', 'webp', { quality: 50 }, {height: 700});
+processImg('project-air-view', 'png', 'jpg', { quality: 50 }, {height: 700});
 
 console.log('Creating styles dest folder...');
 fs.mkdir(cssDest, { recursive: true }, onError);
